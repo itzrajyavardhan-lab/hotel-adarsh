@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Adarsh — Where Luxury Meets Soul</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== LOADER ===================== -->
+<div id="loader">
+  <div class="loader-logo">HOTEL ADARSH</div>
+  <div class="loader-line"></div>
+  <div class="loader-sub">Where Luxury Meets Soul</div>
+</div>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="crown">👑</span> HOTEL ADARSH
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#help">Help</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <!-- Theme Switcher -->
+      <div class="theme-switcher" id="themeSwitcher">
+        <button class="theme-btn active" data-t="dark"  title="Dark Mode">🌙</button>
+        <button class="theme-btn"        data-t="light" title="Light Mode">☀️</button>
+        <button class="theme-btn"        data-t="ocean" title="Ocean Mode">🌊</button>
+        <button class="theme-btn"        data-t="rose"  title="Rose Mode">🌸</button>
+      </div>
+      <button class="book-nav-btn" onclick="scrollToBook()">Book Now</button>
+    </div>
+
+    <!-- Hamburger for Mobile -->
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"     onclick="closeMobile()">About</a>
+    <a href="#rooms"     onclick="closeMobile()">Rooms</a>
+    <a href="#menu"      onclick="closeMobile()">Menu</a>
+    <a href="#amenities" onclick="closeMobile()">Amenities</a>
+    <a href="#gallery"   onclick="closeMobile()">Gallery</a>
+    <a href="#contact"   onclick="closeMobile()">Contact</a>
+    <a href="#help"      onclick="closeMobile()">Help</a>
+    <a href="#book"      onclick="closeMobile()">Book Now →</a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <div class="hero-particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-star"></i> 5-Star Luxury Experience</div>
+    <h1 class="hero-title">
+      HOTEL<br>
+      <em>Adarsh</em>
+    </h1>
+    <p class="hero-sub">Where every stay becomes a timeless memory</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="scrollToBook()">
+        <i class="fas fa-calendar-check"></i> Reserve Your Stay
+      </button>
+      <button class="btn-outline" onclick="scrollTo('#rooms')">
+        <i class="fas fa-door-open"></i> Explore Rooms
+      </button>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">25+</div><div class="lbl">Years of Excellence</div></div>
+    <div class="hero-stat"><div class="num">120</div><div class="lbl">Luxury Rooms</div></div>
+    <div class="hero-stat"><div class="num">4.9★</div><div class="lbl">Guest Rating</div></div>
+    <div class="hero-stat"><div class="num">50K+</div><div class="lbl">Happy Guests</div></div>
+  </div>
+  <div class="scroll-indicator"><div class="scroll-dot"></div></div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hotel Adarsh Lobby" class="about-img">
+        <div class="about-badge">
+          <div class="big">25</div>
+          <div class="sm">Years of<br>Excellence</div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">A Legacy of <em>Refined</em> Hospitality</h2>
+        <div class="divider"></div>
+        <p class="section-sub">Hotel Adarsh has been the jewel of luxury hospitality for over two decades. Nestled in the heart of the city, we blend timeless elegance with modern comfort, crafting experiences that linger long after checkout.</p>
+        <p class="section-sub" style="margin-top:1rem;">Every corner of our hotel tells a story — from the hand-painted lobby murals to the bespoke furnishings sourced from master craftsmen across India.</p>
+        <div class="about-features">
+          <div class="about-feat"><i class="fas fa-award icon"></i> Award Winning Service</div>
+          <div class="about-feat"><i class="fas fa-utensils icon"></i> Gourmet Dining</div>
+          <div class="about-feat"><i class="fas fa-spa icon"></i> World-Class Spa</div>
+          <div class="about-feat"><i class="fas fa-wifi icon"></i> Smart Room Tech</div>
+          <div class="about-feat"><i class="fas fa-shield-alt icon"></i> 24/7 Concierge</div>
+          <div class="about-feat"><i class="fas fa-leaf icon"></i> Eco Certified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ROOMS ===================== -->
+<section id="rooms">
+  <div class="container">
+    <div class="rooms-header">
+      <div class="reveal">
+        <div class="section-label">Accommodations</div>
+        <h2 class="section-title">Our <em>Finest</em> Rooms &amp; Suites</h2>
+      </div>
+      <button class="btn-outline reveal reveal-delay-2" onclick="scrollToBook()">View All Rooms</button>
+    </div>
+
+    <div class="rooms-grid">
+
+      <!-- Deluxe Room -->
+      <div class="room-card reveal">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Deluxe Room" class="room-img">
+          <div class="room-badge">Best Value</div>
+        </div>
+        <div class="room-body">
+          <div class="room-title">Deluxe Room</div>
+          <p class="room-desc">Beautifully appointed 320 sq.ft room with plush bedding, city views, and premium toiletries for a perfect stay.</p>
+          <div class="room-amenities">
+            <div class="room-am"><i class="fas fa-wifi"></i> Free WiFi</div>
+            <div class="room-am"><i class="fas fa-tv"></i> 55" TV</div>
+            <div class="room-am"><i class="fas fa-snowflake"></i> AC</div>
+            <div class="room-am"><i class="fas fa-coffee"></i> Mini Bar</div>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">
+              <div class="from">from</div>
+              <div class="amt">₹4,999</div>
+              <div class="per">/ night</div>
+            </div>
+            <button class="book-btn" onclick="openBooking('Deluxe Room')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium Suite -->
+      <div class="room-card reveal reveal-delay-1">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&q=80" alt="Premium Suite" class="room-img">
+          <div class="room-badge" style="background:#7b4fff;color:#fff;">Popular</div>
+        </div>
+        <div class="room-body">
+          <div class="room-title">Premium Suite</div>
+          <p class="room-desc">Expansive 580 sq.ft suite with separate living area, king-size bed, jacuzzi, and panoramic skyline views.</p>
+          <div class="room-amenities">
+            <div class="room-am"><i class="fas fa-wifi"></i> Free WiFi</div>
+            <div class="room-am"><i class="fas fa-bath"></i> Jacuzzi</div>
+            <div class="room-am"><i class="fas fa-concierge-bell"></i> Butler</div>
+            <div class="room-am"><i class="fas fa-cocktail"></i> Bar</div>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">
+              <div class="from">from</div>
+              <div class="amt">₹9,999</div>
+              <div class="per">/ night</div>
+            </div>
+            <button class="book-btn" onclick="openBooking('Premium Suite')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Royal Suite -->
+      <div class="room-card reveal reveal-delay-2">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Royal Suite" class="room-img">
+          <div class="room-badge" style="background:#e85d04;color:#fff;">Luxury</div>
+        </div>
+        <div class="room-body">
+          <div class="room-title">Royal Suite</div>
+          <p class="room-desc">The pinnacle of luxury: 1,200 sq.ft suite with private pool deck, personal chef service, and bespoke interiors.</p>
+          <div class="room-amenities">
+            <div class="room-am"><i class="fas fa-swimming-pool"></i> Pool Deck</div>
+            <div class="room-am"><i class="fas fa-utensils"></i> Chef</div>
+            <div class="room-am"><i class="fas fa-car"></i> Transfer</div>
+            <div class="room-am"><i class="fas fa-spa"></i> Spa</div>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">
+              <div class="from">from</div>
+              <div class="amt">₹24,999</div>
+              <div class="per">/ night</div>
+            </div>
+            <button class="book-btn" onclick="openBooking('Royal Suite')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Family Suite -->
+      <div class="room-card reveal reveal-delay-3">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80" alt="Family Suite" class="room-img">
+          <div class="room-badge" style="background:#2d9e5a;color:#fff;">Family</div>
+        </div>
+        <div class="room-body">
+          <div class="room-title">Family Suite</div>
+          <p class="room-desc">Thoughtfully designed 750 sq.ft suite with two bedrooms, bunk beds, kids' corner, and family entertainment setup.</p>
+          <div class="room-amenities">
+            <div class="room-am"><i class="fas fa-child"></i> Kids Corner</div>
+            <div class="room-am"><i class="fas fa-gamepad"></i> Gaming</div>
+            <div class="room-am"><i class="fas fa-tv"></i> 2 TVs</div>
+            <div class="room-am"><i class="fas fa-swimming-pool"></i> Pool</div>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">
+              <div class="from">from</div>
+              <div class="amt">₹13,999</div>
+              <div class="per">/ night</div>
+            </div>
+            <button class="book-btn" onclick="openBooking('Family Suite')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOOKING FORM ===================== -->
+<section id="book">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center">Reservations</div>
+      <h2 class="section-title">Book Your <em>Dream</em> Stay</h2>
+      <p class="section-sub" style="margin:0 auto">Fill in your details and our team will confirm your reservation within 30 minutes.</p>
+    </div>
+    <div class="booking-container reveal reveal-delay-1">
+      <form class="booking-form" onsubmit="submitBooking(event)">
+        <div class="form-group">
+          <label><i class="fas fa-user" style="margin-right:6px"></i> Full Name</label>
+          <input type="text" placeholder="Your full name" id="bName" required>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-envelope" style="margin-right:6px"></i> Email</label>
+          <input type="email" placeholder="your@email.com" id="bEmail" required>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-phone" style="margin-right:6px"></i> Phone</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX" id="bPhone">
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-door-open" style="margin-right:6px"></i> Room Type</label>
+          <select id="bRoom">
+            <option value="">Select a Room</option>
+            <option>Deluxe Room — ₹4,999/night</option>
+            <option>Premium Suite — ₹9,999/night</option>
+            <option>Royal Suite — ₹24,999/night</option>
+            <option>Family Suite — ₹13,999/night</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-calendar" style="margin-right:6px"></i> Check-In Date</label>
+          <input type="date" id="bCheckin">
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-calendar-check" style="margin-right:6px"></i> Check-Out Date</label>
+          <input type="date" id="bCheckout">
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-users" style="margin-right:6px"></i> Guests</label>
+          <select id="bGuests">
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-comment" style="margin-right:6px"></i> Special Requests</label>
+          <input type="text" placeholder="Anniversary, dietary needs, etc." id="bRequest">
+        </div>
+        <button type="submit" class="form-submit">
+          <i class="fas fa-calendar-check"></i> &nbsp; Confirm Reservation
+        </button>
+      </form>
+      <p class="booking-note">
+        <i class="fas fa-lock"></i> Secure booking — No credit card required. Free cancellation up to 24 hrs before check-in.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AMENITIES ===================== -->
+<section id="amenities">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center">World-Class Facilities</div>
+      <h2 class="section-title">Everything You <em>Desire</em></h2>
+    </div>
+    <div class="amenities-grid">
+      <div class="amenity-card reveal"><div class="amenity-icon"><i class="fas fa-swimming-pool"></i></div><div class="amenity-title">Infinity Pool</div><div class="amenity-desc">Rooftop infinity pool with panoramic city views, open 6AM–10PM</div></div>
+      <div class="amenity-card reveal reveal-delay-1"><div class="amenity-icon"><i class="fas fa-spa"></i></div><div class="amenity-title">Luxury Spa</div><div class="amenity-desc">Award-winning spa with Ayurvedic and international treatments</div></div>
+      <div class="amenity-card reveal reveal-delay-2"><div class="amenity-icon"><i class="fas fa-dumbbell"></i></div><div class="amenity-title">Fitness Center</div><div class="amenity-desc">State-of-the-art 24/7 gym with personal trainers on request</div></div>
+      <div class="amenity-card reveal reveal-delay-3"><div class="amenity-icon"><i class="fas fa-utensils"></i></div><div class="amenity-title">Fine Dining</div><div class="amenity-desc">Multiple restaurants serving Indian, Continental, and Asian cuisine</div></div>
+      <div class="amenity-card reveal"><div class="amenity-icon"><i class="fas fa-wine-glass-alt"></i></div><div class="amenity-title">Sky Lounge Bar</div><div class="amenity-desc">Rooftop bar with handcrafted cocktails and live music on weekends</div></div>
+      <div class="amenity-card reveal reveal-delay-1"><div class="amenity-icon"><i class="fas fa-business-time"></i></div><div class="amenity-title">Business Center</div><div class="amenity-desc">Fully equipped conference rooms and co-working spaces</div></div>
+      <div class="amenity-card reveal reveal-delay-2"><div class="amenity-icon"><i class="fas fa-car"></i></div><div class="amenity-title">Valet Parking</div><div class="amenity-desc">Complimentary valet and airport transfer services</div></div>
+      <div class="amenity-card reveal reveal-delay-3"><div class="amenity-icon"><i class="fas fa-concierge-bell"></i></div><div class="amenity-title">24/7 Concierge</div><div class="amenity-desc">Dedicated concierge team for every need, day and night</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOD MENU ===================== -->
+<section id="menu">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Culinary Experience</div>
+      <h2 class="section-title">Our <em>Signature</em> Menu</h2>
+      <p class="section-sub">From dawn breakfasts to midnight snacks, our chefs craft each dish with passion and the finest ingredients.</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="menu-tabs reveal reveal-delay-1" style="margin-top:2.5rem">
+      <button class="menu-tab active" onclick="switchTab(event,'breakfast')">🌅 Breakfast</button>
+      <button class="menu-tab" onclick="switchTab(event,'lunch')">🍽️ Lunch</button>
+      <button class="menu-tab" onclick="switchTab(event,'dinner')">🌙 Dinner</button>
+      <button class="menu-tab" onclick="switchTab(event,'desserts')">🍮 Desserts</button>
+      <button class="menu-tab" onclick="switchTab(event,'drinks')">🍹 Drinks</button>
+    </div>
+
+    <!-- Breakfast -->
+    <div class="menu-panel active" id="panel-breakfast">
+      <div class="menu-grid">
+        <div class="menu-item reveal"><img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">English Breakfast Platter</div><div class="menu-item-desc">Eggs, bacon, sausage, grilled tomatoes, beans &amp; toasted sourdough</div><div class="menu-item-footer"><span class="menu-item-price">₹650</span><span class="menu-item-tag">Chef's Pick</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1484723091739-30990033bdb3?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">French Toast Stack</div><div class="menu-item-desc">Thick-cut brioche French toast with maple syrup and berry compote</div><div class="menu-item-footer"><span class="menu-item-price">₹420</span><span class="menu-item-tag">Veg</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1557925923-cd4648e211a0?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">South Indian Spread</div><div class="menu-item-desc">Idli, vada, dosa with coconut chutney and sambar</div><div class="menu-item-footer"><span class="menu-item-price">₹380</span><span class="menu-item-tag">Veg</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Avocado Bowl</div><div class="menu-item-desc">Smashed avocado on multigrain toast with poached eggs and microgreens</div><div class="menu-item-footer"><span class="menu-item-price">₹490</span><span class="menu-item-tag">Healthy</span></div></div></div>
+      </div>
+    </div>
+
+    <!-- Lunch -->
+    <div class="menu-panel" id="panel-lunch">
+      <div class="menu-grid">
+        <div class="menu-item reveal"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Dal Makhani Thali</div><div class="menu-item-desc">Slow-cooked black lentils, naan, rice, raita, pickle &amp; gulab jamun</div><div class="menu-item-footer"><span class="menu-item-price">₹750</span><span class="menu-item-tag">Signature</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Wood-Fired Pizza</div><div class="menu-item-desc">Margherita or Chicken Tikka pizza baked in stone oven</div><div class="menu-item-footer"><span class="menu-item-price">₹620</span><span class="menu-item-tag">Chef's Pick</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Grilled Salmon</div><div class="menu-item-desc">Atlantic salmon with lemon butter sauce, asparagus and mashed potato</div><div class="menu-item-footer"><span class="menu-item-price">₹1,150</span><span class="menu-item-tag">Premium</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Buddha Bowl</div><div class="menu-item-desc">Quinoa, roasted veggies, chickpeas, tahini dressing &amp; fresh greens</div><div class="menu-item-footer"><span class="menu-item-price">₹550</span><span class="menu-item-tag">Vegan</span></div></div></div>
+      </div>
+    </div>
+
+    <!-- Dinner -->
+    <div class="menu-panel" id="panel-dinner">
+      <div class="menu-grid">
+        <div class="menu-item reveal"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Butter Chicken</div><div class="menu-item-desc">Tender chicken in rich tomato-butter sauce with garlic naan</div><div class="menu-item-footer"><span class="menu-item-price">₹850</span><span class="menu-item-tag">Bestseller</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Wagyu Tenderloin</div><div class="menu-item-desc">200g Wagyu beef, truffle mash, seasonal vegetables &amp; red wine jus</div><div class="menu-item-footer"><span class="menu-item-price">₹3,200</span><span class="menu-item-tag">Premium</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Paneer Tikka Masala</div><div class="menu-item-desc">Marinated paneer cubes in aromatic spiced gravy with butter naan</div><div class="menu-item-footer"><span class="menu-item-price">₹720</span><span class="menu-item-tag">Veg</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Prawn Biryani</div><div class="menu-item-desc">Fragrant basmati rice with jumbo prawns, saffron and fried onions</div><div class="menu-item-footer"><span class="menu-item-price">₹1,050</span><span class="menu-item-tag">Signature</span></div></div></div>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-panel" id="panel-desserts">
+      <div class="menu-grid">
+        <div class="menu-item reveal"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Gulab Jamun Cheesecake</div><div class="menu-item-desc">Classic cheesecake infused with gulab jamun and rose water</div><div class="menu-item-footer"><span class="menu-item-price">₹380</span><span class="menu-item-tag">Fusion</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Chocolate Lava Cake</div><div class="menu-item-desc">Warm dark chocolate molten cake with vanilla bean ice cream</div><div class="menu-item-footer"><span class="menu-item-price">₹420</span><span class="menu-item-tag">Bestseller</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Mango Kulfi</div><div class="menu-item-desc">Homemade Alphonso mango kulfi with falooda and rose syrup</div><div class="menu-item-footer"><span class="menu-item-price">₹280</span><span class="menu-item-tag">Seasonal</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Tiramisu</div><div class="menu-item-desc">Espresso-soaked ladyfingers layered with mascarpone and cocoa</div><div class="menu-item-footer"><span class="menu-item-price">₹360</span><span class="menu-item-tag">Italian</span></div></div></div>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="menu-panel" id="panel-drinks">
+      <div class="menu-grid">
+        <div class="menu-item reveal"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Signature Old Fashioned</div><div class="menu-item-desc">Bourbon, bitters, orange peel and house-made demerara syrup</div><div class="menu-item-footer"><span class="menu-item-price">₹850</span><span class="menu-item-tag">Signature</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-1"><img src="https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Mango Lassi</div><div class="menu-item-desc">Fresh Alphonso mango blended with yoghurt, cardamom and saffron</div><div class="menu-item-footer"><span class="menu-item-price">₹220</span><span class="menu-item-tag">Non-Alc</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-2"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Masala Chai</div><div class="menu-item-desc">Aromatic spiced tea brewed with ginger, cardamom, cinnamon &amp; milk</div><div class="menu-item-footer"><span class="menu-item-price">₹120</span><span class="menu-item-tag">Warm</span></div></div></div>
+        <div class="menu-item reveal reveal-delay-3"><img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=200&q=70" alt="" class="menu-item-img"><div class="menu-item-body"><div class="menu-item-name">Fresh Juice Bar</div><div class="menu-item-desc">Cold-pressed seasonal fruits — watermelon, pomegranate, or carrot-ginger</div><div class="menu-item-footer"><span class="menu-item-price">₹180</span><span class="menu-item-tag">Fresh</span></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section id="gallery">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Visual Journey</div>
+      <h2 class="section-title">Hotel <em>Gallery</em></h2>
+    </div>
+    <div class="gallery-grid reveal reveal-delay-1">
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" class="gallery-img" alt="Lobby"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=400&q=80" class="gallery-img" alt="Suite"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=400&q=80" class="gallery-img" alt="Room"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" class="gallery-img" alt="Pool"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" class="gallery-img" alt="Restaurant"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80" class="gallery-img" alt="Spa"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section id="testimonials">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center">Guest Reviews</div>
+      <h2 class="section-title">What Our <em>Guests</em> Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="stars">★★★★★</div><p class="testi-text">"Absolutely breathtaking experience from check-in to checkout. The Royal Suite was beyond our expectations. The staff was impeccable and the food divine."</p><div class="testi-author"><div class="testi-avatar">RK</div><div><div class="testi-name">Rahul Kapoor</div><div class="testi-loc">Mumbai, India</div></div></div></div>
+      <div class="testi-card reveal reveal-delay-1"><div class="stars">★★★★★</div><p class="testi-text">"We celebrated our anniversary here and Hotel Adarsh made it truly unforgettable. The rose petal setup and private dinner was magical. Will absolutely return."</p><div class="testi-author"><div class="testi-avatar">PS</div><div><div class="testi-name">Priya &amp; Sanjay</div><div class="testi-loc">Bangalore, India</div></div></div></div>
+      <div class="testi-card reveal reveal-delay-2"><div class="stars">★★★★★</div><p class="testi-text">"As a frequent business traveller, I've stayed in many 5-star hotels. Hotel Adarsh stands out for its warmth and genuine care. The business facilities are top-notch."</p><div class="testi-author"><div class="testi-avatar">AM</div><div><div class="testi-name">Arjun Mehta</div><div class="testi-loc">Delhi, India</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">We'd Love to <em>Hear</em> From You</h2>
+        <p class="section-sub">Have a question? Planning an event? Our team is here to help you create the perfect experience.</p>
+        <div class="contact-info">
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-detail"><div class="label">Address</div><div class="value">12 Luxury Lane, Hotel District, New Delhi — 110001</div></div></div>
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-detail"><div class="label">Phone</div><div class="value">+91 98765 43210</div></div></div>
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-detail"><div class="label">Email</div><div class="value">hello@hoteladarsh.com</div></div></div>
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-clock"></i></div><div class="contact-detail"><div class="label">Check-In / Check-Out</div><div class="value">2:00 PM / 12:00 Noon</div></div></div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <form class="contact-form" onsubmit="submitContact(event)">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject">
+          <textarea placeholder="Your message..."></textarea>
+          <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HELP / FAQ ===================== -->
+<section id="help">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Help &amp; Support</div>
+      <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+    </div>
+    <div class="faq-list reveal reveal-delay-1">
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What are the check-in and check-out times?<i class="fas fa-chevron-down arrow"></i></div><div class="faq-a">Standard check-in is at 2:00 PM and check-out is at 12:00 Noon. Early check-in and late check-out can be arranged based on availability. Premium and Royal Suite guests enjoy flexible timings.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is breakfast included in the room rate?<i class="fas fa-chevron-down arrow"></i></div><div class="faq-a">Breakfast is complimentary for Royal Suite and Family Suite bookings. For Deluxe and Premium rooms, breakfast can be added for ₹450/person. Our breakfast spread is available from 7:00 AM to 10:30 AM.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is your cancellation policy?<i class="fas fa-chevron-down arrow"></i></div><div class="faq-a">You can cancel your reservation free of charge up to 24 hours before your scheduled check-in. Cancellations within 24 hours are subject to one night's charge. No-shows will be charged the full stay amount.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you offer airport transfers?<i class="fas fa-chevron-down arrow"></i></div><div class="faq-a">Yes! We offer complimentary airport transfers for Royal Suite guests. For other room categories, transfers are available at ₹1,200 one-way. Please inform us at least 2 hours before arrival for arrangements.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Are pets allowed at Hotel Adarsh?<i class="fas fa-chevron-down arrow"></i></div><div class="faq-a">We welcome well-behaved pets in select rooms with prior notice. A pet fee of ₹1,000/night applies. Please contact us before booking to confirm pet-friendly room availability.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I host events or private functions?<i class="fas fa-chevron-down arrow"></i></div><div class="faq-a">Absolutely! We have elegant banquet halls and garden spaces for weddings, corporate events, and celebrations. Our event planning team can customise packages for groups of 20 to 500 guests. Contact us for bespoke event proposals.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo">👑 Hotel Adarsh</span>
+        <p class="footer-desc">Where luxury meets the warmth of Indian hospitality. Creating timeless memories for our guests since 2000.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-tripadvisor"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#rooms">Our Rooms</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#menu">Restaurant</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Spa &amp; Wellness</a></li>
+          <li><a href="#">Event Hosting</a></li>
+          <li><a href="#">Airport Transfer</a></li>
+          <li><a href="#">Business Center</a></li>
+          <li><a href="#">Tour Packages</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Help</h4>
+        <ul>
+          <li><a href="#book">Book a Room</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#help">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Hotel Adarsh. All rights reserved. Crafted with ♥ for our guests.</div>
+      <div class="footer-rating"><i class="fas fa-star" style="color:var(--accent)"></i> 4.9/5 on TripAdvisor · Google · Booking.com</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<!-- Custom JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
