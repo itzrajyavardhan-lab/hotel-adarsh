@@ -133,9 +133,8 @@ document.getElementById('bCheckin').addEventListener('change', function () {
 });
 
 function submitBooking(event) {
-  event.preventDefault(); // page reload rokne ke liye
+  event.preventDefault();
 
-  // Values lena (IDs already sahi hai 👍)
   var name = document.getElementById("bName").value;
   var email = document.getElementById("bEmail").value;
   var phone = document.getElementById("bPhone").value;
@@ -145,23 +144,50 @@ function submitBooking(event) {
   var guests = document.getElementById("bGuests").value;
   var request = document.getElementById("bRequest").value;
 
-  // Message banana
-  var message = `*Hotel Adarsh Booking*%0A
-👤 Name: ${name}%0A
-📧 Email: ${email}%0A
-📞 Phone: ${phone}%0A
-🏨 Room: ${room}%0A
-📅 Check-in: ${checkin}%0A
-📅 Check-out: ${checkout}%0A
-👥 Guests: ${guests}%0A
-📝 Request: ${request}`;
+  // 🔥 SIMPLE STRING (no backtick confusion)
+  var message = "Hotel Booking Details\n\n"
+    + "Name: " + name + "\n"
+    + "Email: " + email + "\n"
+    + "Phone: " + phone + "\n"
+    + "Room: " + room + "\n"
+    + "Check-in: " + checkin + "\n"
+    + "Check-out: " + checkout + "\n"
+    + "Guests: " + guests + "\n"
+    + "Request: " + request;
 
-  // Apna WhatsApp number (country code ke sath)
+  var whatsappNumber = "918252890568"; // Replace with your WhatsApp number (with country code)
+
+  // 🔥 MOST IMPORTANT LINE
+  var finalMessage = encodeURIComponent(message);
+
+  var url = "https://api.whatsapp.com/send?phone=" 
+            + 918252890568 + "&text=" + finalMessage;
+
+  // 🔥 Redirect (mobile friendly)
+  window.location.href = url;
+}
+
+function submitContact(event) {
+  event.preventDefault();
+
+  var name = document.getElementById("cName").value;
+  var email = document.getElementById("cEmail").value;
+  var subject = document.getElementById("cSubject").value;
+  var message = document.getElementById("cMessage").value;
+
+  // Final message
+  var finalMsg = "New Contact Message\n\n"
+    + "Name: " + name + "\n"
+    + "Email: " + email + "\n"
+    + "Subject: " + subject + "\n"
+    + "Message: " + message;
+
   var whatsappNumber = "918252890568";
 
-  // WhatsApp link
-  var url = `https://wa.me/${918252890568}`;
+  var url = "https://api.whatsapp.com/send?phone=" 
+            + 918252890568 + "&text=" 
+            + encodeURIComponent(finalMsg);
 
-  // Open WhatsApp
-  window.open(url, "_blank");
+  // Mobile friendly redirect
+  window.location.href = url;
 }
