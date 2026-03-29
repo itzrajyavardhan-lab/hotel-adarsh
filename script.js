@@ -131,3 +131,37 @@ document.getElementById('bCheckout').min = today;
 document.getElementById('bCheckin').addEventListener('change', function () {
   document.getElementById('bCheckout').min = this.value;
 });
+
+function submitBooking(event) {
+  event.preventDefault(); // page reload rokne ke liye
+
+  // Values lena (IDs already sahi hai 👍)
+  var name = document.getElementById("bName").value;
+  var email = document.getElementById("bEmail").value;
+  var phone = document.getElementById("bPhone").value;
+  var room = document.getElementById("bRoom").value;
+  var checkin = document.getElementById("bCheckin").value;
+  var checkout = document.getElementById("bCheckout").value;
+  var guests = document.getElementById("bGuests").value;
+  var request = document.getElementById("bRequest").value;
+
+  // Message banana
+  var message = `*Hotel Adarsh Booking*%0A
+👤 Name: ${name}%0A
+📧 Email: ${email}%0A
+📞 Phone: ${phone}%0A
+🏨 Room: ${room}%0A
+📅 Check-in: ${checkin}%0A
+📅 Check-out: ${checkout}%0A
+👥 Guests: ${guests}%0A
+📝 Request: ${request}`;
+
+  // Apna WhatsApp number (country code ke sath)
+  var whatsappNumber = "918252890568";
+
+  // WhatsApp link
+  var url = `https://wa.me/${918252890568}`;
+
+  // Open WhatsApp
+  window.open(url, "_blank");
+}
