@@ -141,26 +141,103 @@
 
     <div class="rooms-grid">
 
-      <!-- Deluxe Room -->
+      <!-- Executive Room -->
       <div class="room-card reveal">
         <div class="room-img-wrap">
-          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Deluxe Room" class="room-img">
-          <div class="room-badge">Best Value</div>
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Executive Room" class="room-img">
+          <div class="room-badge" style="background:#c9a96e;color:#fff;">Recommended</div>
         </div>
         <div class="room-body">
-          <div class="room-title">Suite Room</div>
-          <p class="room-desc">240m sq/2583ft sq | Max 2 adults</p>
-            <div class="room-amenities">
-            <div class="room-am"><i class="fa-solid fa-city"></i> City view</div>
-            <div class="room-am"><i class="fa-solid fa-wifi"></i> Wi-Fi [Free]</div>
+          <div class="room-title">Executive Room</div>
+          <p class="room-desc">220 m²/2368 ft² | Max 3 adults | 1 King Bed</p>
+          <div class="room-amenities">
+            <div class="room-am"><i class="fas fa-city"></i> City view</div>
+            <div class="room-am"><i class="fas fa-wifi"></i> Free WiFi</div>
             <div class="room-am"><i class="fa-solid fa-snowflake"></i> AC</div>
-            <div class="room-am"><i class="fa-solid fa-mountain-sun"></i> Window</div>
-            </div>
+            <div class="room-am"><i class="fa-solid fa-tv"></i> Smart TV</div>
           </div>
           <div class="room-footer">
             <div class="room-price">
               <div class="from">from</div>
-              <div class="amt">₹1,999</div>
+              <div class="amt">₹4,499</div>
+              <div class="per">/ night</div>
+            </div>
+            <button class="book-btn" onclick="openBooking('Executive Room')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive Club Room -->
+      <div class="room-card reveal reveal-delay-1">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&q=80" alt="Executive Club Room" class="room-img">
+          <div class="room-badge" style="background:#7b4fff;color:#fff;">Premium</div>
+        </div>
+        <div class="room-body">
+          <div class="room-title">Executive Club Room</div>
+          <p class="room-desc">240 m²/2583 ft² | Max 3 adults</p>
+          <div class="room-amenities">
+            <div class="room-am"><i class="fas fa-city"></i> City view</div>
+            <div class="room-am"><i class="fas fa-wifi"></i> Free WiFi</div>
+            <div class="room-am"><i class="fa-solid fa-snowflake"></i> AC</div>
+            <div class="room-am"><i class="fas fa-utensils"></i> Mini Bar</div>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">
+              <div class="from">from</div>
+              <div class="amt">₹5,499</div>
+              <div class="per">/ night</div>
+            </div>
+            <button class="book-btn" onclick="openBooking('Executive Club Room')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Superior King Room -->
+      <div class="room-card reveal reveal-delay-2">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Superior King Room" class="room-img">
+          <div class="room-badge" style="background:#e85d04;color:#fff;">Luxury</div>
+        </div>
+        <div class="room-body">
+          <div class="room-title">Superior King Room</div>
+          <p class="room-desc">29 m²/312 ft² | Max 3 adults | 1 King Bed</p>
+          <div class="room-amenities">
+            <div class="room-am"><i class="fas fa-city"></i> City view</div>
+            <div class="room-am"><i class="fas fa-wifi"></i> Free WiFi</div>
+            <div class="room-am"><i class="fa-solid fa-snowflake"></i> AC</div>
+            <div class="room-am"><i class="fas fa-bath"></i> Luxury Bath</div>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">
+              <div class="from">from</div>
+              <div class="amt">₹3,999</div>
+              <div class="per">/ night</div>
+            </div>
+            <button class="book-btn" onclick="openBooking('Superior King Room')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suite Room -->
+      <div class="room-card reveal reveal-delay-3">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80" alt="Suite Room" class="room-img">
+          <div class="room-badge" style="background:#2d9e5a;color:#fff;">Popular</div>
+        </div>
+        <div class="room-body">
+          <div class="room-title">Suite Room</div>
+          <p class="room-desc">240 m²/2583 ft² | Max 2 adults</p>
+          <div class="room-amenities">
+            <div class="room-am"><i class="fas fa-city"></i> City view</div>
+            <div class="room-am"><i class="fas fa-wifi"></i> Free WiFi</div>
+            <div class="room-am"><i class="fa-solid fa-snowflake"></i> AC</div>
+            <div class="room-am"><i class="fas fa-wine-glass"></i> Wine Cellar</div>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">
+              <div class="from">from</div>
+              <div class="amt">₹4,999</div>
               <div class="per">/ night</div>
             </div>
             <button class="book-btn" onclick="openBooking('Suite Room')">Book Now</button>
@@ -168,86 +245,28 @@
         </div>
       </div>
 
-      <!-- Premium Suite -->
-      <div class="room-card reveal reveal-delay-1">
+      <!-- Standard Room -->
+      <div class="room-card reveal">
         <div class="room-img-wrap">
-          <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&q=80" alt="Premium Suite" class="room-img">
-          <div class="room-badge" style="background:#7b4fff;color:#fff;">Popular</div>
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Standard Room" class="room-img">
+          <div class="room-badge" style="background:#666;color:#fff;">Best Value</div>
         </div>
         <div class="room-body">
-          <div class="room-title">Standard </div>
+          <div class="room-title">Standard</div>
+          <p class="room-desc">12 m²/129 ft² | Max 2 adults | 1 King Bed</p>
           <div class="room-amenities">
+            <div class="room-am"><i class="fas fa-city"></i> City view</div>
             <div class="room-am"><i class="fas fa-wifi"></i> Free WiFi</div>
-            <div class="room-am"><i class="fa-solid fa-mug-hot"></i> Electric kettle</div>
-            <div class="room-am"><i class="fa-solid fa-bath"></i> Private bathroom</div>
-            <div class="room-am"><i class="fas fa-shower"></i> Shower</div>
             <div class="room-am"><i class="fa-solid fa-snowflake"></i> AC</div>
-            <div class="room-am"><i class="fa-solid fa-bottle-water"></i> Free bottled water</div>
-            </div>
+            <div class="room-am"><i class="fas fa-tv"></i> LED TV</div>
           </div>
           <div class="room-footer">
             <div class="room-price">
               <div class="from">from</div>
-              <div class="amt">₹2,999</div>
+              <div class="amt">₹2,499</div>
               <div class="per">/ night</div>
             </div>
-            <button class="book-btn" onclick="openBooking('Premium Suite')">Book Now</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Royal Suite -->
-      <div class="room-card reveal reveal-delay-2">
-        <div class="room-img-wrap">
-          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Royal Suite" class="room-img">
-          <div class="room-badge" style="background:#e85d04;color:#fff;">Luxury</div>
-        </div>
-        <div class="room-body">
-          <div class="room-title">Executive Club Room</div>
-          <p class="room-desc">240 m sq/2583ft sq | Max 2 adults
-          </p>
-          <div class="room-amenities">
-            <div class="room-am"><i class="fas fa-city"></i> City view</div>
-            <div class="room-am"><i class="fas fa-wifi"></i> Wi-Fi [free]</div>
-            <div class="room-am"><i class="fa-solid fa-snowflake"></i> AC</div>
-          </div>
-          <div class="room-footer">
-            <div class="room-price">
-              <div class="from">from</div>
-              <div class="amt">₹1,884</div>
-              <div class="per">/ night</div>
-            </div>
-            <button class="book-btn" onclick="openBooking('Royal Suite')">Book Now</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Family Suite -->
-      <div class="room-card reveal reveal-delay-3">
-        <div class="room-img-wrap">
-          <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80" alt="Family Suite" class="room-img">
-          <div class="room-badge" style="background:#2d9e5a;color:#fff;">Family</div>
-        </div>
-        <div class="room-body">
-          <div class="room-title">Superior king  Room</div>
-          <p class="room-desc">29m sq/312ft sq | Max 3 adults | 1 King Bed</p>
-          <div class="room-amenities">
-            <div class="room-am"><i class="fas fa-city"></i> City view</div>
-            <div class="room-am"><i class="fa-solid fa-mug-hot"></i> Electric kettle</div>
-            <div class="room-am"><i class="fa-solid fa-bath"></i> Private bathroom</div>
-            <div class="room-am"><i class="fas fa-shower"></i> Shower</div>
-            <div class="room-am"><i class="fa-solid fa-snowflake"></i> AC</div>
-            <div class="room-am"><i class="fa-solid fa-bottle-water"></i> Free bottled water</div>
-
-
-          </div>
-          <div class="room-footer">
-            <div class="room-price">
-              <div class="from">from</div>
-              <div class="amt">₹3,499</div>
-              <div class="per">/ night</div>
-            </div>
-            <button class="book-btn" onclick="openBooking('Family Suite')">Book Now</button>
+            <button class="book-btn" onclick="openBooking('Standard')">Book Now</button>
           </div>
         </div>
       </div>
